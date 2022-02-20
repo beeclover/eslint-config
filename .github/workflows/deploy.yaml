@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: '16.x'
       - name: Add GiHub Package Token
-        run: echo "npmAuthToken:\"${{ secrets.TOKEN }}\"" >> .yarnrc.yaml
+        run: echo "npmAuthIdent:\ \"npmAuthIdent:\"Hansanghyeon:${{ secrets.TOKEN }}" >> .yarnrc.yaml
       - run: yarn
       - run: yarn npm publish
         env:
