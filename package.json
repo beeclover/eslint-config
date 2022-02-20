@@ -1,0 +1,19 @@
+{
+  "name": "@beeclover/eslint-config-react",
+  "version": "1.0.0",
+  "description": "beeclover eslint react 환경설정",
+  "license": "ISC",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0"
+  },
+  "packageManager": "yarn@3.1.1"
+}
