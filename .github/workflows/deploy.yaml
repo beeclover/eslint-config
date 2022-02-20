@@ -1,7 +1,5 @@
 name: Publish Package
 on:
-  push:
-    branches: [main]
   release:
     types: [created]
 jobs:
@@ -12,6 +10,12 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '16.x'
+      - name: Add GiHub Package Token
+        run: |
+          echo "
+          npmAuthIdent: \"Hansanghyeon:${{ secrets.TOKEN }}\"
+          npmAuthToken: \"${{ secrets.TOKEN }}\"
+          " >> .yarnrc.yml
       - run: yarn
       - run: yarn npm publish
         env:
