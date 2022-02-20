@@ -17,7 +17,7 @@ jobs:
           # Defaults to the user or organization that owns the workflow file
           scope: '@beeclover'
       - name: Add GiHub Package Token
-        run: echo "npmAuthIdent:\"Hansanghyeon:${{ secrets.TOKEN }}\"" >> .yarnrc.yaml
+        run: echo "npmAuthToken:\"${{ secrets.TOKEN }}\"" >> .yarnrc.yaml
       - run: yarn
       - run: yarn npm publish
         env:
