@@ -1,45 +1,20 @@
 module.exports = {
-    env: {
-      browser: true,
-      es2021: true,
-      commonjs: true,
-      node: true,
-    },
-    extends: [
-      "eslint:recommended",
-      "plugin:react/recommended",
-      "plugin:import/errors",
-      "plugin:import/warnings",
-      "plugin:prettier/recommended",
-    ],
-    overrides: [
-      {
-        files: ["**/*.jsx", "**/*.js"],
-        rules: {
-          "react/prop-types": "off",
-          "react/react-in-jsx-scope": "off",
-        },
-      },
-    ],
-    plugins: ["react", "prettier"],
-    parserOptions: {
-      ecmaFeatures: {
-        jsx: true,
-      },
-      ecmaVersion: "latest",
-      sourceType: "module",
-    },
-    ignorePatterns: ["**/node_modules/**/*", "**/vendor/*"],
-    settings: {
-      react: {
-        version: "detect",
-      },
-      "import/resolver": {
-        node: {
-          extensions: [".js", ".jsx", ".ts", ".tsx"],
-          moduleDirectory: ["node_modules", "src/"],
-        },
-      },
-    },
-  };
-  
+  env: {
+    es2021: true,
+  },
+  extends: ['eslint:recommended', 'airbnb-base'],
+  parserOptions: {
+    ecmaVersion: 12,
+    sourceType: 'module',
+  },
+  rules: {
+    // 클래스 메서드 안에서 반드시 this를 사용할 필요 없음
+    'class-methods-use-this': 'off',
+
+    // 행의 최대 길이는 120
+    'max-len': ['warn', 120],
+
+    // 문장의 마지막에 존재하는 주석 시작 전에 한 개 이상의 공백을 허용
+    'no-multi-spaces': ['error', { ignoreEOLComments: true }],
+  },
+};
