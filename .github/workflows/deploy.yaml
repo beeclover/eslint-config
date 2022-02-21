@@ -19,7 +19,7 @@ jobs:
           npmAuthToken: \"${{ secrets.TOKEN }}\"
           " >> .yarnrc.yml
       - run: yarn
-      - run: yarn npm publish
+      - run: yarn publish
         env:
           GH_TOKEN: ${{ secrets.TOKEN }}
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
