@@ -1,10 +1,8 @@
 module.exports = {
   extends: [
     'plugin:react/recommended',
-    'airbnb',
-    'airbnb/hooks',
   ],
-  plugins: ['react'],
+  plugins: ['react', 'react-hook'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
