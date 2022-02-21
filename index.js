@@ -2,7 +2,12 @@ module.exports = {
   env: {
     es2021: true,
   },
-  extends: ['eslint:recommended', 'airbnb-base'],
+  extends: [
+    'eslint:recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'airbnb-base',
+  ],
   parserOptions: {
     ecmaVersion: 12,
     sourceType: 'module',
